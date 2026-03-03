@@ -1,4 +1,13 @@
 data_ingestion:
   data_url: "https://raw.githubusercontent.com/RAKIBUL424/Datasets/refs/heads/main/car%20data.csv"
 data_preprocessing:
-  test_size: 0.25
+  test_size: 0.30
+model_training:
+  X_train: "data/processed/X_train.csv"
+  y_train: "data/processed/y_train.csv"
+  model_output: "models/model.pkl"
+model_evaluation:
+  model_input: "models/model.pkl"
+  X_test: "data/processed/X_test.csv"
+  y_test: "data/processed/y_test.csv"
+  evaluation_output: "data/metrics"

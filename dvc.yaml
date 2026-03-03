@@ -13,3 +13,17 @@ stages:
       - data/raw
     outs:
       - data/processed
+  model_training:
+    cmd: python src/model_training.py
+    deps:
+      - src/model_training.py
+      - data/processed
+    outs:
+      - models/model.pkl
+  model_evaluation:
+    cmd: python src/model_evaluation.py
+    deps:
+      - src/model_evaluation.py
+      - models/model.pkl
+      - data/processed
+      
