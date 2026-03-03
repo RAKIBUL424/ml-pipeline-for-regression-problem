@@ -1,0 +1,4 @@
+data_ingestion:
+  data_url: "https://raw.githubusercontent.com/RAKIBUL424/Datasets/refs/heads/main/car%20data.csv"
+data_preprocessing:
+  test_size: 0.25
